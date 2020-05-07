@@ -58,9 +58,9 @@ float g_flTickInterval;
 public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max)
 {
 	EngineVersion CurrentEngine = GetEngineVersion();
-	if(CurrentEngine != Engine_Left4Dead2 && CurrentEngine != Engine_Left4Dead)
+	if(CurrentEngine != Engine_Left4Dead2)
 	{
-		strcopy(error, err_max, "Plugin only supports Left 4 Dead 1/2");
+		strcopy(error, err_max, "Plugin only supports Left 4 Dead 2");
 		return APLRes_SilentFailure;
 	}
 	return APLRes_Success;
@@ -68,7 +68,7 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 
 public Plugin myinfo =
 {
-	name = "[L4D 1/2]boomer_gibs_restore",
+	name = "[L4D2]boomer_gibs_restore",
 	author = "Lux",
 	description = "Replicates the clientside cheat z_boomer_gibs",
 	version = PLUGIN_VERSION,
