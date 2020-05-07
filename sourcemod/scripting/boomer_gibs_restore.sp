@@ -162,7 +162,7 @@ bool CreateBoomerGib(float vecPos[3], float vecAng[3], BoomerGib GibType)
 	DispatchSpawn(iGib);
 	
 	
-	static char sBuf[32];
+	static char sBuf[64];
 	Format(sBuf, sizeof(sBuf), "OnUser1 !self:BecomeRagdoll::%f:-1", g_flTickInterval);
 	SetVariantString(sBuf);
 	AcceptEntityInput(iGib, "AddOutput");
