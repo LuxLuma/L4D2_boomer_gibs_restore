@@ -166,11 +166,6 @@ bool CreateBoomerGib(float vecPos[3], float vecAng[3], BoomerGib GibType)
 	Format(sBuf, sizeof(sBuf), "OnUser1 !self:BecomeRagdoll::%f:-1", g_flTickInterval);
 	SetVariantString(sBuf);
 	AcceptEntityInput(iGib, "AddOutput");
-	
-	Format(sBuf, sizeof(sBuf), "OnUser1 !self:Kill::%f:-1", g_flTickInterval * 4);//Church guy "better safe than sorry"
-	SetVariantString(sBuf);
-	AcceptEntityInput(iGib, "AddOutput");
-	
 	AcceptEntityInput(iGib, "FireUser1");
 	
 	return bAtEntityLimit;
