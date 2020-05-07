@@ -72,7 +72,7 @@ public Plugin myinfo =
 	author = "Lux",
 	description = "Replicates the clientside cheat z_boomer_gibs",
 	version = PLUGIN_VERSION,
-	url = "-"
+	url = "https://github.com/LuxLuma/L4D_boomer_gibs_restore"
 };
 
 public void OnPluginStart()
