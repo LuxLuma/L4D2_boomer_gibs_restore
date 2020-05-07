@@ -31,7 +31,7 @@
 
 #define ZOMBIECLASS_BOOMER	2
 #define GIBMODELS 5
-#define MAX_FLESH_PARTS 8 //changeme for more flesh parts bewarned setting too high will make some gibs despawn instantly
+#define MAX_FLESH_PARTS 17 //changeme for more flesh parts bewarned setting too high will make some gibs despawn instantly
 
 enum BoomerGib
 {
