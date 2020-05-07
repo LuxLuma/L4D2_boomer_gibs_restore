@@ -149,7 +149,7 @@ void SpawnBoomerGibs(float vecPos[3], float vecAng[3])
 
 bool CreateBoomerGib(float vecPos[3], float vecAng[3], BoomerGib GibType)
 {
-	int	iGib = CreateEntityByName("prop_dynamic");
+	int iGib = CreateEntityByName("prop_dynamic");
 	if(iGib == -1)
 		return false;
 	
