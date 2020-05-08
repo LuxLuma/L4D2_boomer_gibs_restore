@@ -31,7 +31,7 @@
 
 #define ZOMBIECLASS_BOOMER	2
 #define GIBMODELS 5
-#define MAX_FLESH_PARTS 17 //changeme for more flesh parts bewarned setting too high will make some gibs despawn instantly
+#define MAX_FLESH_PARTS 12 //changeme for more flesh parts bewarned setting too high will make some gibs despawn instantly depends on client settings from testing 15 total seems to be consisten regardless of settings
 
 enum BoomerGib
 {
@@ -136,7 +136,8 @@ void SpawnBoomerGibs(float vecPos[3], float vecAng[3])
 	if(CreateBoomerGib(vecPosCopy, vecAng, BoomerGib_Arm))//flesh parts
 		return;
 	
-	for(int i = 1; i <= MAX_FLESH_PARTS; i++)
+	int iFleshyParts = GetRandomInt(MAX_FLESH_PARTS / 2, MAX_FLESH_PARTS);// add random amount
+	for(int i = 1; i <= iFleshyParts; i++)
 	{
 		vecPosCopy[0] = vecPos[0] + GetRandomFloat(-20.0, 20.0);
 		vecPosCopy[1] = vecPos[1] + GetRandomFloat(-20.0, 20.0);
@@ -149,7 +150,7 @@ void SpawnBoomerGibs(float vecPos[3], float vecAng[3])
 
 bool CreateBoomerGib(float vecPos[3], float vecAng[3], BoomerGib GibType)
 {
-	int iGib = CreateEntityByName("prop_dynamic");
+	int iGib = CreateEntityByName("prop_dynamic_override");
 	if(iGib == -1)
 		return false;
 	
