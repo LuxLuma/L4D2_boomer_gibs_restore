@@ -23,7 +23,7 @@
 
 #pragma newdecls required
 
-#define PLUGIN_VERSION "1.0.1"
+#define PLUGIN_VERSION "1.0.2"
 
 #define INT_(%1) view_as<int>(%1)
 
@@ -107,7 +107,7 @@ public void ePlayerDeath(Event hEvent, const char[] sEventName, bool bDontBroadc
 	SpawnBoomerGibs(vecPos, vecAng);
 	
 	TE_SetupExplodeForce(vecPos, 50.0, 30.0);
-	TE_SendToAll();
+	TE_SendToAll(g_flTickInterval);
 }
 
 void SpawnBoomerGibs(float vecPos[3], float vecAng[3])
