@@ -106,7 +106,7 @@ public void ePlayerDeath(Event hEvent, const char[] sEventName, bool bDontBroadc
 	
 	SpawnBoomerGibs(vecPos, vecAng);
 	
-	TE_SetupExplodeForce(vecPos, 50.0, 30.0);
+	TE_SetupExplodeForce(vecPos, 75.0, 20.0);
 	TE_SendToAll(g_flTickInterval);
 }
 
