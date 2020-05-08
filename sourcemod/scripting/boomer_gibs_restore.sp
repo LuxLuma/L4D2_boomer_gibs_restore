@@ -133,7 +133,7 @@ void SpawnBoomerGibs(float vecPos[3], float vecAng[3])
 	vecAngCopy[1] += -45.0;
 	
 	GetDirection(vecPosCopy, vecAngCopy, 30.0);
-	if(CreateBoomerGib(vecPosCopy, vecAng, BoomerGib_Arm))//flesh parts
+	if(CreateBoomerGib(vecPosCopy, vecAng, BoomerGib_Arm))//arm
 		return;
 	
 	int iFleshyParts = GetRandomInt(MAX_FLESH_PARTS / 2, MAX_FLESH_PARTS);// add random amount
@@ -143,7 +143,7 @@ void SpawnBoomerGibs(float vecPos[3], float vecAng[3])
 		vecPosCopy[1] = vecPos[1] + GetRandomFloat(-20.0, 20.0);
 		vecPosCopy[2] = vecPos[2] + GetRandomFloat(-20.0, 20.0);
 		
-		if(CreateBoomerGib(vecPosCopy, vecAng, view_as<BoomerGib>(GetRandomInt(INT_(BoomerGib_Flesh1), INT_(BoomerGib_Flesh3)))))
+		if(CreateBoomerGib(vecPosCopy, vecAng, view_as<BoomerGib>(GetRandomInt(INT_(BoomerGib_Flesh1), INT_(BoomerGib_Flesh3)))))//flesh parts
 			return;
 	}
 }
